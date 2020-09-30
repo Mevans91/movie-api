@@ -1,5 +1,5 @@
 class Api::V1::MoviesController < ApplicationController
-    skip_before_action authenticate, only:[:index, :show]
+    skip_before_action :authenticate, only:[:index, :show]
     before_action :set_movie, only:[:show, :update, :destroy]
     
     #get all
